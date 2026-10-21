@@ -1,0 +1,148 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+  color: #222;
+  margin: 0;
+  font-size: 14px;
+}
+
+.header {
+  background-color: #1f4e79;
+  color: white;
+  text-align: center;
+  padding: 18px 16px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.header p {
+  margin: 5px 0 0 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+.box {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #1f4e79;
+  margin-top: 0;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+h3 {
+  font-size: 15px;
+}
+
+input[type=text], select {
+  padding: 5px;
+  margin: 4px 8px 4px 2px;
+  border: 1px solid #999;
+  max-width: 100%;
+}
+
+button {
+  background-color: #1f4e79;
+  color: white;
+  border: none;
+  padding: 7px 14px;
+  margin: 4px 4px 4px 0;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2e75b6;
+}
+
+button:disabled {
+  background-color: #999;
+}
+
+button.red {
+  background-color: #c0392b;
+}
+
+button.small {
+  padding: 3px 8px;
+  font-size: 12px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: left;
+  font-size: 13px;
+}
+
+th {
+  background-color: #dde7f0;
+}
+
+.scroll {
+  overflow-x: auto;
+}
+
+.output {
+  background-color: #111;
+  color: #0f0;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  padding: 10px;
+  margin-top: 10px;
+  min-height: 150px;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.msg {
+  color: #1f4e79;
+  font-weight: bold;
+}
+
+.green {
+  color: green;
+  font-weight: bold;
+}
+
+.redtext {
+  color: red;
+  font-weight: bold;
+}
+
+.badrow {
+  background-color: #ffd6d6;
+}
+
+.hash {
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  color: #666;
+  font-size: 12px;
+}

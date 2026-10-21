@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IoT Blockchain Authentication</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">
+  <h1>Blockchain Based IoT Device Authentication</h1>
+  <p>Computer Networks - Course Based Project</p>
+</div>
+
+<div class="container">
+
+  <!-- Network status -->
+  <div class="box">
+    <h2>Network Status</h2>
+    <p>Devices --(WiFi)--&gt; IoT Gateway (192.168.4.1) --&gt; Blockchain Nodes --&gt; Cloud Server</p>
+    <table>
+      <tr><th>Node</th><th>Status</th><th>Blocks</th><th>Chain Valid</th><th>Action</th></tr>
+      <tbody id="nodeTable"></tbody>
+    </table>
+  </div>
+
+  <!-- Register device -->
+  <div class="box">
+    <h2>1. Register Device</h2>
+    <label>Device ID:</label>
+    <input type="text" id="devId" placeholder="SENSOR004">
+    <label>Device Type:</label>
+    <select id="devType">
+      <option>Temperature Sensor</option>
+      <option>Humidity Sensor</option>
+      <option>Smart Meter</option>
+      <option>Camera</option>
+    </select>
+    <button id="btnRegister">Register</button>
+    <p id="regMsg" class="msg"></p>
+
+    <h3>Registered Devices</h3>
+    <table>
+      <tr><th>Device ID</th><th>Type</th><th>Public Key</th><th>Status</th><th>Action</th></tr>
+      <tbody id="deviceTable"></tbody>
+    </table>
+  </div>
+
+  <!-- Authenticate -->
+  <div class="box">
+    <h2>2. Authenticate Device</h2>
+    <label>Select Device:</label>
+    <select id="authDevice"></select>
+    <label><input type="checkbox" id="fakeKey"> Use fake key (attacker)</label>
+    <label><input type="checkbox" id="useCache" checked> Enable gateway cache</label>
+    <br>
+    <button id="btnAuth">Authenticate</button>
+    <button id="btnTest">Run Test Cases</button>
+    <div id="output" class="output">Output will be shown here...</div>
+  </div>
+
+  <!-- Blockchain -->
+  <div class="box">
+    <h2>3. Blockchain Ledger</h2>
+    <label>View Node:</label>
+    <select id="viewNode">
+      <option value="0">Node A</option>
+      <option value="1">Node B</option>
+      <option value="2">Node C</option>
+    </select>
+    <button id="btnValidate">Validate Chain</button>
+    <label>Block No:</label>
+    <input type="text" id="tamperNo" size="3">
+    <button id="btnTamper" class="red">Tamper Block</button>
+    <p id="chainMsg" class="msg"></p>
+    <div class="scroll">
+      <table>
+        <tr><th>#</th><th>Time</th><th>Type</th><th>Data</th><th>Prev Hash</th><th>Hash</th></tr>
+        <tbody id="chainTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Log -->
+  <div class="box">
+    <h2>4. Authentication Log</h2>
+    <p>Total: <b id="total">0</b> | Granted: <b id="granted">0</b> | Denied: <b id="denied">0</b> | Avg Time: <b id="avg">0</b> ms</p>
+    <div class="scroll">
+      <table>
+        <tr><th>Time</th><th>Device</th><th>Result</th><th>Reason</th><th>Time Taken</th></tr>
+        <tbody id="logTable"></tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">CN Course Project | Department of CSE</div>
+
+<script src="script.js"></script>
+</body>
+</html>
